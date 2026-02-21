@@ -1,0 +1,19 @@
+*
+{font-size : 50px;}
+#p2 {
+    
+color :blue;
+
+font-family: "Courier New", "Courier" , "monospace"; 
+
+}
+#p3 {color :red;
+font-family: "Times New Roman", Times, serif;
+transform: rotateZ(45deg);
+background-color: yellow; }
+.one {color:chocolate;}
+p{color:green;}
+#p5 {color:pink;
+font-family: "Arial", sans-serif;
+transform: rotateZ(100deg);
+background-color: lightblue; }
