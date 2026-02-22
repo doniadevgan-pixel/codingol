@@ -1,0 +1,52 @@
+body {
+  background-color: black;}
+
+  
+  h1 { color: rgb(47, 47, 199);
+  font-family: 'Courier New', monospace;
+  text-indent: 25%;}
+
+
+  
+  
+  ul {
+    
+   color : white;
+  font-family: "Arial", Times, serif;
+  text-align: center;
+    font-size : 20px;
+  }
+
+
+
+
+
+  
+
+
+  li::before{
+
+    content:"🚀"
+  }
+
+
+    
+
+    a::after{
+        content: " 🌟";
+    }
+
+  a:hover{
+    color: chartreuse;
+    font-size : 50px;
+    }
+    p {
+        color: white;
+        font-family: "Arial", Times, serif;
+        font-size : 20px;
+     }
+
+    p::first-letter{
+        color: red;
+        font-size: 30px;
+    }
