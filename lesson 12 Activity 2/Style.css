@@ -1,0 +1,48 @@
+
+
+#id1 {
+
+  background-color: pink;
+  border:  5px solid red;
+  font-size: 50px;
+  font-family: 'Courier New', Courier, monospace;
+  opacity: 0.1;
+  }
+
+#id2 {
+  
+  background-color: lightblue;
+  border:  5px solid orange;
+  font-size: 50px;
+  font-family: 'Courier New', Courier, monospace;
+  opacity: 0.3;
+
+}
+
+#id3 {
+  background-color: lightgreen;
+  border:  5px solid blue;
+  font-size: 50px;
+  font-family: 'Courier New', Courier, monospace;
+  opacity:0.6;
+
+
+}
+
+#id4 {
+  background-color: lightyellow;
+  border:  5px solid green;
+  font-size: 50px;
+  font-family: 'Courier New', Courier, monospace;
+  opacity: 0.9;
+
+
+}
+
+#id5 {
+  background-color: lightgray;
+  border:  5px solid black;
+  font-size: 50px;
+  font-family: 'Courier New', Courier, monospace;
+  opacity: 0.2;
+}
