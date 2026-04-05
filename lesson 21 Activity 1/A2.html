@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h1 id="myH"></h1>
+<p id="myP"></p>
+
+<div style="background-color: aquamarine; text-align: center;" id="mydiv"></div>
+<button type="button" onclick="mul(10,10)"   >Click Me!!!!</button>
+
+<script>
+    // My heading:
+    
+function mul(x, y)
+
+{ var multiplication = x * y
+
+    alert(multiplication)
+    return multiplication
+}
+
+    var myFirstVariable = 10 ;
+    var mySecondVariable = 10 ;
+
+
+
+
+     var myThirdVariable = myFirstVariable * mySecondVariable;
+    
+
+
+
+    document.getElementById("myH").innerHTML = myFirstVariable;
+    document.getElementById("myP").innerHTML = "My first paragraph.";
+
+
+    document.getElementById("mydiv").innerHTML = myThirdVariable;
+</script>
+
+</body>

@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h1 id="myH"></h1>
+<p id="myP"></p>
+
+<div style="background-color: aquamarine; text-align: center;" id="mydiv"></div>
+<div style="background-color: orange; text-align: center;" id="mydiv2"></div>
+<div style="background-color: pink; text-align: center;" id="mydiv3"></div>
+<div style="background-color: yellow; text-align: center;" id="mydiv4"></div>
+<div style="background-color: lightblue; text-align: center;" id="mydiv5"></div>
+
+<script>
+
+
+
+a=10
+
+
+
+alert(a)
+
+
+
+
+function sum(x,y)
+{
+    var summation = x + y + a
+   return   summation
+
+}
+
+function sub(x,y,z)
+{  var subtraction = x - y - z
+    return subtraction
+
+}    
+
+    // My heading:
+
+    var myFirstVariable = 10 ;
+    var mySecondVariable = 10 ;
+    var myThirdVariable = 10 ;  
+
+
+
+    
+    var myFifthVariable = myFirstVariable + mySecondVariable;
+
+    var myNinthVariable= sum(10,50)
+    var myTenthVariable = sub(153,78,10)
+
+
+
+
+
+
+    document.getElementById("mydiv2").innerHTML = myNinthVariable;
+    document.getElementById("mydiv4").innerHTML = myTenthVariable;
+    document.getElementById("mydiv3").innerHTML = myFifthVariable;
+
+    
+</script>
+
+</body>
