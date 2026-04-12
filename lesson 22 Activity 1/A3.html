@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1 id="myH"></h1>
+    <p id="myP"></p>
+
+    <div style="background-color: aquamarine; text-align: center; font-size: 200px" id="mydiv"></div>
+    
+
+    <script>
+        
+
+        var input = prompt("Give me something ")
+        document.getElementById("mydiv").innerHTML = input;
+        
+
+        switch(parseInt(input)) {
+
+            case 0 :
+             document.getElementById("mydiv").innerHTML = "Juice";
+             break
+            case 1 :
+             document.getElementById("mydiv").innerHTML = "COke";
+             break
+            case 2 :
+                document.getElementById("mydiv").innerHTML = "Pepsi";
+                break            
+            default :
+                document.getElementById("mydiv").innerHTML = "Try Again";
+                break
+
+                case 3 :
+                    document.getElementById("mydiv").innerHTML = "Sprite";
+                    break
+                case 4 :
+                    document.getElementById("mydiv").innerHTML = "lemonade";
+                    break
+                    case 5 :
+                        document.getElementById("mydiv").innerHTML = "Water";
+                        break
+
+
+
+
+
+        }
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
+
