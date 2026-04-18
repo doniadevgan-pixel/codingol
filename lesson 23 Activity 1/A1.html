@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<h1> Ojects</h1>
+
+<div id="div1" style=" font-size: larger;"></div>
+<div id="div2"></div>
+<div id="div3"></div>
+<div id="div4"></div>    
+<div id="div5"></div>
+<div id="div6"></div>
+<div id="div7"></div>
+<div id="div8"></div>
+<div id="div9"></div>
+<div id="div10"></div>    
+
+
+<script>
+
+var StudentOne = "Dayaan"
+var Age =  26
+var Address =  "India"
+var Grade = "12"
+var Section = "A"
+
+
+var StudentTwo= "Mitul"
+var AgeTwo =  14
+var AddressTwo =  "India"
+var GradeTwo = "9"
+var SectionTwo = "B"
+
+var Student = {
+
+Name : " John",
+Age : 15,
+Address: "Canberra",
+Grade: 10,
+Section: "A"
+
+};
+
+var Student2 = {
+
+Name: "Ibrahim",
+Age: 14,
+Address: "Australia",
+Grade: 9,
+Section: "C"
+}
+
+document.getElementById('div1').innerHTML = Student['Name']
+document.getElementById('div2').innerHTML = Student['Age']
+document.getElementById('div3').innerHTML = Student.Address
+document.getElementById('div4').innerHTML = Student.Grade
+document.getElementById('div5').innerHTML = Student.Section
+
+
+document.getElementById('div6').innerHTML = Student2.Name
+document.getElementById('div7').innerHTML = Student2.Age
+document.getElementById('div8').innerHTML = Student2.Address
+document.getElementById('div9').innerHTML = Student2.Grade
+document.getElementById('div10').innerHTML = Student2.Section
+
+
+</script>
+
+</body>
+</html>
