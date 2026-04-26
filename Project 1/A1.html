@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Solving math problems</title>
+</head>
+<body>
+
+    <h1 id="myH"></h1>
+    <p id="myP"></p>
+
+    <div style="background-color: aquamarine; text-align: center; font-size: 150px" id="mydiv"></div>
+    <div style="background-color: rgba(197, 40, 40, 0.753); text-align: center; font-size: 150px" id="mydiv2"></div>
+    <div style="background-color: peru; text-align: center; font-size: 150px" id="mydiv3"></div>
+
+    <script>
+        
+function sum(x,y)
+{
+    var summation = x + y
+   return   summation
+
+}
+var myFirstVariable = 536 ;
+var mySecondVariable = 376 ;
+var myThirdVariable = myFirstVariable + mySecondVariable ;
+document.getElementById("mydiv").innerHTML = sum(myFirstVariable, mySecondVariable) ;
+
+
+function sub(x,y,z)
+{  var subtraction = x - y
+    return subtraction}    
+
+var myFirstVariable = 647 ;
+var mySecondVariable = 335 ;
+var myThirdVariable = myFirstVariable - mySecondVariable ;
+document.getElementById("mydiv2").innerHTML = sub(myFirstVariable, mySecondVariable) ;         
+
+
+
+
+var findmax= function(a,b,c) {return Math.max(a,b,c)};
+varFirstNumber = 10
+varSecondNumber = 20
+varThirdNumber = 15 
+
+document.getElementById("mydiv3").innerHTML = findmax(varFirstNumber,varSecondNumber,varThirdNumber) ;
+
+
+ </script>
+
+</body>
+
+</html>
+
