@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mituls calculator</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 120px;
+            background-color: #bfdbfe;
+            font-family: 'times new roman', serif;
+        }
+
+        .calculator {
+            background-color: #004563;
+            padding: 24px;
+            border-radius: 16px;
+            width: 300px;
+            box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        #display {
+            width: 100%;
+            height: 65px;
+            font-size: 34px;
+            text-align: right;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 10px;
+            background-color: #dbeafe;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        button {
+            padding: 16px;
+            font-size: 20px;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            background-color: #2563eb;
+            color: white;
+        }
+
+        /* Hover*/
+        button:hover {
+            background-color: #1d4ed8;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        /* Operator buttons ( + − × ÷ ) */
+        .operator {
+            background-color: #f59e0b;
+        }
+
+        .operator:hover {
+            background-color: #d97706;
+        }
+
+        /* x² button */
+        .special {
+            background-color: #0891b2;
+        }
+
+        .special:hover {
+            background-color: #0e7490;
+        }
+
+        /* Clear button */
+        .clear {
+            background-color: #ef4444;
+            grid-column: span 2;
+        }
+
+        .clear:hover {
+            background-color: #dc2626;
+        }
+
+        /* Equals button */
+        .equals {
+            background-color: #10b981;
+            grid-column: span 2;
+        }
+
+        .equals:hover {
+            background-color: #059669;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="calculator">
+
+        <!-- Screen — "disabled" means buttons only, no typing -->
+        <input type="text" id="display" disabled placeholder="0">
+
+        <div class="buttons">
+            <button id="btn-clear" class="clear">C</button>
+            <button id="btn-square" class="special">x²</button>
+            <button class="input-btn operator" data-value="/" id="yay11">÷</button>
+            <button class="input-btn operator" data-value="*" id="yay12">×</button>
+
+            <button class="input-btn" data-value="7" id="yay">7</button>
+            <button class="input-btn" data-value="8" id="yay2">8</button>
+            <button class="input-btn" data-value="9" id="yay3">9</button>
+            <button class="input-btn operator" data-value="-" id="yay13">−</button>
+
+            <button class="input-btn" data-value="4" id="yay4">4</button>
+            <button class="input-btn" data-value="5" id="yay5">5</button>
+            <button class="input-btn" data-value="6" id="yay6">6</button>
+            <button class="input-btn operator" data-value="+" id="yay14">+</button>
+
+            <button class="input-btn" data-value="1" id="yay7">1</button>
+            <button class="input-btn" data-value="2" id="yay8">2</button>
+            <button class="input-btn" data-value="3" id="yay9">3</button>
+            <button class="input-btn" data-value=".">.</button>
+
+            <button class="input-btn" data-value="0" style="grid-column: span 2;" id="yay10">0</button>
+            <button id="btn-equals" class="equals">=</button>
+        </div>
+    </div>
+
+    <script>
+        // Grab the elements we need
+        const display = document.getElementById('display');
+        const btnClear = document.getElementById('btn-clear');
+        const btnSquare = document.getElementById('btn-square');
+        const btnEquals = document.getElementById('btn-equals');
+        const inputButtons = document.querySelectorAll('.input-btn');
+
+        // show clear button functionality
+        btnClear.onclick = function () {
+            display.value = '';
+        };
+
+        yay.onclick = function () {
+            display.value = display.value+ "7";
+        };
+
+        yay2.onclick = function () {
+            display.value = display.value+ "8";
+        };
+
+        yay3.onclick = function () {
+            display.value =display.value+ "9";
+        };
+
+        yay4.onclick = function () {
+            display.value = display.value+ "4";
+        };
+
+        yay5.onclick = function () {
+            display.value = display.value+ "5";
+        };
+
+        yay6.onclick = function () {
+            display.value = display.value+ "6";
+        };
+
+        yay7.onclick = function () {
+            display.value = display.value+ "1";
+        };
+
+        yay8.onclick = function () {
+            display.value = display.value+ "2";
+        };
+
+        yay9.onclick = function () {
+            display.value =display.value+ '3';
+        };
+
+        yay10.onclick = function () {
+            display.value =display.value+ "0";
+        };
+
+        yay11.onclick = function () {
+            display.value = display.value+ '/';
+        };
+
+        yay12.onclick = function () {
+            display.value = display.value+ '*';
+        };
+
+        yay13.onclick = function () {
+            display.value =display.value+ '-';
+        };
+
+        yay14.onclick = function () {
+            display.value = display.value+ '+';
+        };
+
+        btnEquals.onclick = function () {
+           
+
+            display.value = eval( display.value)
+        };
+
+        btnSquare.onclick = function () {
+            display.value = display.value * display.value;
+            };
+
+
+
+
+
+
+
+
+        
+
+    
+
+
+    </script>
+
+</body>
+
+</html>

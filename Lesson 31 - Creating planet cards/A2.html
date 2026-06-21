@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Data of three people</title>
+    </head>
+<body>
+    <div id="Person1Name" style= "font-size:45px; font-family:'Times New Roman', Times, serif"></div>
+    <div id="Person1Age" style= "font-size:30px; font-color: Darkblue";></div>
+    <div id="Person1Address" style= "font-size:25px; background-color: rgb(253, 180, 10);"></div>
+    <div id="hi1" style= "font-size:45px; font-family:'Times New Roman', Times, serif"></div>
+    <div id="Hi2" style= "font-size:30px; font-weight: bolder; color:black;"></div>
+    <div id="Hi3" style= "font-size:25px; background-color: rgb(24, 102, 145);"></div>
+    <div id="Nice" style= "font-size:45px; font-family:'Times New Roman', Times, serif"></div>
+    <div id="Wow" style= "font-size:30px; font-weight: bolder; color:Darkgreen;"></div>
+    <div id="Amazing" style= "font-size:25px; background-color: rgb(255, 0, 0);"></div>
+
+<script>
+
+class Student {
+
+constructor(name , age , address) {
+
+    this.name = name
+    this.age = age
+    this.address = address
+
+}
+
+describe() {
+
+return this.name + " lives in "  + this.address
+
+}
+}
+
+class Teacher {
+
+constructor(name, age, speciality) {
+    this.name = name
+    this.age = age
+    this.speciality = speciality    
+}
+describe() {
+    return this.name + " is a " + this.speciality + " teacher."
+}
+}
+
+var student1 = new Student('Daya', "10" , "India")
+
+
+console.log(student1.name)
+console.log(student1.age)
+console.log(student1.address)
+
+var student2 = new Student('ABCD', "100" , "Atlantis")
+
+
+console.log(student2.name)
+console.log(student2.age)
+console.log(student2.address)
+
+var student3 = new Student('Yohaan', "15" , 'Australia')
+
+document.getElementById("Nice").innerHTML= student3.name;
+document.getElementById("Wow").innerHTML= student3.age;
+document.getElementById("Amazing").innerHTML= student3.address;
+
+var student4 = new Student('Ebin', "2129" , "Australia")
+
+document.getElementById("Person1Name").innerHTML= student4.name;
+document.getElementById("Person1Age").innerHTML= student4.age;
+document.getElementById("Person1Address").innerHTML= student4.address;
+
+var teacher1 = new Teacher('Mr. Smith', "40", 'Math')
+
+document.getElementById("hi1").innerHTML= teacher1.name;
+document.getElementById("Hi2").innerHTML= teacher1.age;
+document.getElementById("Hi3").innerHTML= teacher1.speciality;
+
+
+  
+</script>
+
+
+</body>
+</html> 

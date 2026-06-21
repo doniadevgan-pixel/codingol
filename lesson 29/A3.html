@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple JS Calculator - Unobtrusive</title>
+    <style>
+        /* --- CSS Styling (Remains the same) --- */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #e0e5ec;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .calculator {
+            background-color: #2c3e50;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+            width: 280px;
+        }
+
+        #display {
+            width: 100%;
+            height: 60px;
+            font-size: 32px;
+            text-align: right;
+            margin-bottom: 20px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 8px;
+            background-color: #ecf0f1;
+            color: #2c3e50;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            background-color: #95a5a6;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #7f8c8d;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        .operator {
+            background-color: #e67e22;
+        }
+
+        .operator:hover {
+            background-color: #d35400;
+        }
+
+        .clear {
+            background-color: #e74c3c;
+            grid-column: span 2;
+        }
+
+        .clear:hover {
+            background-color: #c0392b;
+        }
+
+        .equals {
+            background-color: #27ae60;
+            grid-column: span 2;
+        }
+
+        .equals:hover {
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator">
+        <input type="text" id="display" disabled>
+        
+        <div class="buttons">
+            <button id="btn-clear" class="clear">C</button>
+            <button class="input-btn operator" data-value="/">&divide;</button>
+            <button class="input-btn operator" data-value="*">&times;</button>
+            
+            <button class="input-btn" data-value="7">7</button>
+            <button class="input-btn" data-value="8">8</button>
+            <button class="input-btn" data-value="9">9</button>
+            <button class="input-btn operator" data-value="-">-</button>
+            
+            <button class="input-btn" data-value="4">4</button>
+            <button class="input-btn" data-value="5">5</button>
+            <button class="input-btn" data-value="6">6</button>
+            <button class="input-btn operator" data-value="+">+</button>
+            
+            <button class="input-btn" data-value="1">1</button>
+            <button class="input-btn" data-value="2">2</button>
+            <button class="input-btn" data-value="3">3</button>
+            <button class="input-btn" data-value=".">.</button>
+            
+            <button class="input-btn" data-value="0" style="grid-column: span 2;">0</button>
+            <button id="btn-equals" class="equals">=</button>
+        </div>
+    </div>
+
+    <script>
+        // 1. Grab all the elements we need to interact with
+        const display = document.getElementById('display');
+        const btnClear = document.getElementById('btn-clear');
+        const btnEquals = document.getElementById('btn-equals');
+        const inputButtons = document.querySelectorAll('.input-btn');
+
+        // 2. Assign the 'Clear' functionality
+        btnClear.onclick = function() {
+            display.value = '';
+        };
+
+        // 3. Assign the 'Equals' calculation functionality
+        btnEquals.onclick = function() {
+            try {
+                let result = eval(display.value); 
+                
+                if (result === undefined || isNaN(result) || !isFinite(result)) {
+                    display.value = 'Error';
+                } else {
+                    display.value = result;
+                }
+            } catch (error) {
+                display.value = 'Error';
+            }
+        };
+
+        // 4. Loop through all standard buttons and attach the click event
+        inputButtons.forEach(function(button) {
+            button.onclick = function() {
+                // Get the math value from the 'data-value' attribute in the HTML
+                const valueToAdd = this.getAttribute('data-value');
+                display.value += valueToAdd;
+            };
+        });
+    </script>
+
+</body>
+</html>

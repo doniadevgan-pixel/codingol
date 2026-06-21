@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My First Styling Sheet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p style="color:aquamarine" >Paragraph 1 with in line styling</p>
+    <p id = "p2"> This paragraph has an id = 2</p>
+    <p id = "p3"> This paragraph has an id = 3</p>
+    <p id = "p4" class = "one"> This paragraph has a class = one</p>
+    <p id = "p5"> This paragraph has an id =5</p>
+    <h1> Styling in CSS</h1>
+
+
+
+</body>
+</html>
+
+
+<script>
+        // Grab the elements we need
+        const display    = document.getElementById('display');
+        const btnClear   = document.getElementById('btn-clear');
+        const btnSquare  = document.getElementById('btn-square');
+        const btnEquals  = document.getElementById('btn-equals');
+        const inputButtons = document.querySelectorAll('.input-btn');
+
+
+ // C — wipe the screen
+        btnClear.onclick = function() {
+            display.value = '';
+        };
+
+        // x² — square the current number (e.g. 5 → 25)
+        btnSquare.onclick = function() {
+            let num = parseFloat(display.value); // convert screen text to a number
+            display.value = isNaN(num) ? 'Error' : Math.pow(num, 2);
+        };
+
+        // = — calculate the answer using eval()
+        btnEquals.onclick = function() {
+            try {
+                let result = eval(display.value);
+                display.value = (!result && result !== 0) || !isFinite(result) ? 'Error' : result;
+            } catch {
+                display.value = 'Error';
+            }
+        };
+
+        // Number/operator buttons — add their value to the screen
+        inputButtons.forEach(function(button) {
+            button.onclick = function() {
+                display.value += this.getAttribute('data-value');
+            };
+        });
+    </script>
