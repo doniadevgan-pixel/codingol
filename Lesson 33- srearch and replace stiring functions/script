@@ -1,0 +1,11 @@
+Question3 = prompt('Is it sunny outside today (Y/N?)');
+
+if (Question3 == "Y") {
+
+alert("You shoud wear sunglasses and put on sunscream");
+}
+
+else if (Question3 == "N") {
+
+alert("You should then take an umbrella just in case");
+}

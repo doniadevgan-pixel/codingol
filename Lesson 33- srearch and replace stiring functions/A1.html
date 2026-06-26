@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+<h1> Javascript Array Sort</h1>
+<p>Click the buttons to sort the arrays in ascending or descending order.</p>
+<div id="Hello1"></div>
+<div id="Hello2"></div>
+<div id="Hello3"></div>
+<div id="Hello4"></div>
+<div id="Hello5"></div>
+<div id="Hello6"></div>
+<button onclick="ascending()">Ascending Order</button>
+<button onclick="descending()">Descending Order</button>
+<button onclick="maped()">Maped</button>
+<button onclick="Myeval()">Myeval</button>
+
+<Script>
+
+    var numbers = [8, 5, 16, 2, 4, 11, 7];
+
+    function ascending() { 
+        numbers.sort(function(a,b){
+            return a - b;
+        });
+    document.getElementById("Hello1").innerHTML = numbers;
+    }
+
+    function descending() { 
+        numbers.sort(function(a,b){
+            return b - a;
+        });
+    document.getElementById("Hello2").innerHTML = numbers;
+    }
+
+    function maped() {
+        var squared= numbers.map(function(y){
+            return y * y;
+        })
+        document.getElementById("Hello3").innerHTML = squared;
+    }
+    
+    function Myeval() {
+        var b= 15;
+        var z= 5;
+
+        var result= eval("b/z");
+        var result2= eval("b+z");
+        var result3= eval("52*2");
+        document.getElementById("Hello4").innerHTML = result;
+        document.getElementById("Hello5").innerHTML = result2;
+        document.getElementById("Hello6").innerHTML = result3;  
+    }
+</Script>
+</body>
+</html>
