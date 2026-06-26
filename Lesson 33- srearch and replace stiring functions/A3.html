@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+<body>
+    <h1>Javascript Error Handling</h1>
+    <p id="error message" style="color: red;"> no error</p>
+
+<script>
+    try{
+        var a = 65;
+        var b = 1;
+        var c= a*b*d;    
+        document.write(c);}
+    catch (error){  
+        document.getElementById("error message").innerHTML = error.message;
+    }
+</script>
+</body>
+</html>
