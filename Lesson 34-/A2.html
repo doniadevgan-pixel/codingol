@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search and Replace</title>
+</head>
+<body>
+    <h1>String method can convert numbers to strings</h1>
+    <p id="number result"></p>
+    <p id="string result"></p>
+    <p id="search result"></p>
+    <p id="replace result"></p>
+
+<script>
+    var hi = 54;
+    var x = 89;
+
+    var str = "I love to code in JavaScript";
+    var b = str.search("code");
+    var text = str.replace("code", "programme");
+    document.getElementById("number result").innerHTML= hi + x;
+    document.getElementById("string result").innerHTML= String(x) + "" + String(hi);
+    document.getElementById("search result").innerHTML= b;
+    document.getElementById("replace result").innerHTML= text;
+
+</script>
+</body>
+</html>
