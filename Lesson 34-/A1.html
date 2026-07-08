@@ -10,9 +10,10 @@
 <button onclick="saveorder()">Save Order</button>
 <button onclick="startdelivery()">Start Delivery</button>
 
-<div id="Order"></div>
+<div id="OrderItem"></div>
 <div id="Cost"></div>
 <div id="lodedorder"></div>
+<div id="Shop"></div>
 
 <script>
 
@@ -38,10 +39,22 @@
         });
     }
 
-    function async() {
-        
+    async function startdelivery() {
+    document.getElementById("lodedorder").innerHTML = "";
+
+    document.getElementById("lodedorder").innerHTML = "Order is received...";
+    setTimeout(function() {
+        document.getElementById("lodedorder").innerHTML = "Order is being prepared...";
+    }, 2000);
+
+    await delay(4000);{
+    document.getElementById("lodedorder").innerHTML = "Order is out for delivery...";
     }
 
+    await delay (3000);{
+    document.getElementById("Shop").innerHTML = "Order delivered!"; 
+    }
+}
 
 </script>
 </body>
