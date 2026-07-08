@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Tracker</title>
+</head>
+<body>
+<h1>My Delivery Tracker</h1>
+<button onclick="saveorder()">Save Order</button>
+<button onclick="startdelivery()">Start Delivery</button>
+
+<div id="OrderItem"></div>
+<div id="Cost"></div>
+<div id="lodedorder"></div>
+<div id="Shop"></div>
+
+<script>
+
+    let order ={
+   
+        Item: "Pizza",
+        Cost: 8.50,
+        Shop: "My Pizza Place"
+    };
+
+    function saveorder() {
+        let jsonorder = JSON.stringify(order);
+        let lodedorder = JSON.parse(jsonorder); 
+
+        document.getElementById("OrderItem").innerHTML = lodedorder.Item;
+        document.getElementById("Cost").innerHTML = lodedorder.Cost;
+        document.getElementById("Shop").innerHTML = lodedorder.Shop;
+    }
+       
+    function delay(ms) {
+        return new Promise(function(resolve) {
+            setTimeout(resolve, ms);
+        });
+    }
+
+    async function startdelivery() {
+    document.getElementById("lodedorder").innerHTML = "";
+
+    document.getElementById("lodedorder").innerHTML = "Order is received...";
+    setTimeout(function() {
+        document.getElementById("lodedorder").innerHTML = "Order is being prepared...";
+    }, 2000);
+
+    await delay(4000);{
+    document.getElementById("lodedorder").innerHTML = "Order is out for delivery...";
+    }
+
+    await delay (3000);{
+    document.getElementById("Shop").innerHTML = "Order delivered!"; 
+    }
+}
+
+</script>
+</body>
+</html>
