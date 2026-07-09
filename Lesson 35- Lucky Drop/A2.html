@@ -17,13 +17,57 @@
 
 <button onclick="checkform()">Try your luck!</button>
 <p id="result"></p>
-<p id="timer"></p>
 
-<script></script>
-
+<div id="timer"></div>
 
 
-    
-    
+<script>
+
+var stopwatch = 0;
+setInterval(function() {
+    stopwatch = stopwatch + 1
+document.getElementById("timer").textContent = "Time Elapsed: " + stopwatch + " seconds";
+}
+, 1000);
+
+function checkform() {
+
+    var name = document.getElementById("information").value;
+    var guess = document.getElementById("Hi").value;
+    var ok = true;
+
+
+if (name == "") {
+    document.getElementById("name").textContent = "Please enter your name.";
+    document.getElementById("name").style.color = "red";
+}
+else {
+    document.getElementById("name").textContent = "Have a good luck"
+    document.getElementById("name").style.color = "green";
+}
+
+if (guess == "") {
+    document.getElementById("message").textContent = "Please enter a number between 1 to 5.";
+    document.getElementById("message").style.color = "red";
+    ok = false;
+}
+else {
+    document.getElementById("message").textContent = "Your guess is saved. Good luck!"
+    document.getElementById("message").style.color = "green";
+}
+
+if (ok == true) {
+    var randomNumber = Math.floor(Math.random() * 5) + 1;
+    if (guess == randomNumber) {
+        document.getElementById("result").textContent = "Congratulations! You win: " + randomNumber;
+        document.getElementById("result").style.color = "green";
+    }
+    else {
+        document.getElementById("result").textContent = "Sorry, you lose try again. The correct number was: " + randomNumber;
+        document.getElementById("result").style.color = "red";
+    }
+}
+}
+</script>
 </body>
 </html>

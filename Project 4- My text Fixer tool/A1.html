@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My text Fixer</title>
+</head>
+<body>
+    <h1>My Text Fixer</h1>
+    <script>
+        function fixText() {
+            const inputText = document.getElementById('inputText').value;
+            const fixedText = inputText.replace(/[^a-zA-Z0-9\s]/g, '');
+            document.getElementById('outputText').innerText = fixedText;
+        }
+    </script>
+    <textarea id="inputText" rows="10" cols="50" placeholder="Enter your text here..."></textarea><br>
+    <button onclick="fixText()">Fix Text</button>
+    
+</body>
+</html>
