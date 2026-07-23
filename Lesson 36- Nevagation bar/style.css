@@ -1,0 +1,29 @@
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+
+.navigation {
+    background-color: rgb(33, 32, 32);
+    border-top: 2px solid rgb(255, 255, 255);
+    padding: 15px;
+}
+
+.brand-logo {
+    height: 30px;
+    width:auto
+}
+
+.navigation-links {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: white !important;
+}
+
+.navigiation-links:hover {
+    color: rgba(244, 244, 41, 0.823)!important;
+}
+
+
