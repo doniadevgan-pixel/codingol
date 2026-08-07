@@ -1,23 +1,101 @@
-/* Social Media Section */
+body{
+  
+font-family: open sans, sans-serif;
+background-color: rgb(17, 17, 17);
+}
 
-#social-media {
+#container{
 
-background: #313552;
+height: 550px;
+width: 1000px;
+background-image: linear-gradient(to right, rgb(17, 17, 17), rgb(34, 34, 34)), url(134.jpg); margin: 20px auto;
+}
+
+#calculator{
+
+width: 340px;
+height: 520px;
+background-color: rgb(235, 227, 227);
+margin: 0px auto;
+top:20px;
+position: relative;
+border-radius: 5px;
+box-shadow: 0 4px 0 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#keyboard{
+
+height : 400px;
+}
+
+.operator,
+.number,
+.empty {
+
+width: 50px;
+height: 50px;
+margin : 15px;
+float: left;
+border-radius: 50%;
+border-width: 0px;
+font-weight: bold;
+font-size: 20px;
 
 }
 
-/* Add color to Social Media Links */
+.number,
+.empty {
 
-.media_link {
+background-color: rgb(255, 255, 255);
+}
 
-padding: 1rem;
+.number,
+.operator {
 
-max-width: 15rem;
+cursor: pointer;
+}
 
-margin-left: 1rem;
+.operator:active,
+.number:active {
 
-border: 2px solid #f5ba09;
+font-size: 18px;
+}
 
-border-radius: 0.5rem;
+.operator:focus,
+.number:focus,
+.empty:focus {
+
+outline: 0;    
+}
+
+#result{
+
+height: 120px;    
+}
+
+#history{
+
+text-align: right;
+height: 25px;
+margin: 0 20px;
+padding-top: 20px;  
+font-size: 15px;
+color: #919191;
+}
+
+#output{
+
+text-align: right;
+height: 60px;
+margin: 10px 20px;
+font-size: 30px;    
+}
+
+button:nth-child(4) {
+
+    font-size: 25px;
+    background-color: rgba(0, 255, 208, 0.868);
+}
+
 
 }
