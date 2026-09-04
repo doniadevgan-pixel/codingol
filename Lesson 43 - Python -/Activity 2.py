@@ -14,4 +14,5 @@ elif num==0:
     print("the factorial of 0 is 1")
 else:
     print("the factorial of", num, "is", recursion_factorial(num))
-    
+
+    #recursive is when the fuction re calls it self.         # four function in a claculator
