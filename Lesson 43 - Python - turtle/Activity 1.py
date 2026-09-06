@@ -15,3 +15,5 @@ for i in range(90):
     board.forward(i * 2)
     board.right(91)
 turtle.done()
+
+# there are two color options for the turtle graphics: "dark blue" and "black". You can change the background color by modifying the line `screen.bgcolor("dark blue")` to `screen.bgcolor("black")`.
