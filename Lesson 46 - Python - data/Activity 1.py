@@ -33,3 +33,5 @@ names = ["Ibrahim", "Ebin", "Yohaan", "Erash", "Aiden"]
 students = dict(zip(roll_numbers, names))
 print("\nStudent Dictionary:", students)
 print("student at roll 3:", students[3])
+
+# zip() function is used to combine two lists into a dictionary, where roll_numbers are the keys and names are the values.
