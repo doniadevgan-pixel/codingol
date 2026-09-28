@@ -36,3 +36,9 @@ print("{} is {} years old".format(woo.name, woo.age))
 # Whithout constructor it 
 
 # enumerate- enumerate is a built-in function in Python that adds a counter to an iterable and returns it as an enumerate object. It can be used to loop through a list or other iterable and get both the index and the value of each item.
+
+
+# destructors - a destructors 
+
+
+#  effhf hf hf hfh  fhf hfhfhfh  h        hff hh f hf  f  h   h fffhffncnf ch buu bh vbcn vcn hbvcn v bvnj n nkjfvnjvn;nvcbv vjh vnc vbvncjn gbvc bvckmhgf  f hv vjv helooj bijif  hjfb pfighng ifigb igf jifif 
