@@ -39,5 +39,6 @@ for animal in [dog, lion]:
     animal.display()
     animal.speak()
     print()
-        
+
+# Abstraction: Is wheich ever class you need to make abracted the second poiont when you work with abstarct you can many. Also the main idea is to make it esier and simple for the user.
     
