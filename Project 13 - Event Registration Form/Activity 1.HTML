@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Event Registration Form</title>
+</head>
+ 
+<body>
+ 
+  <div class="form-card">
+ 
+    <h1><b>Event Registration Form</b></h1>
+ 
+    <h3>
+      Fill in the form to register for the school event and generate your event pass.
+    </h3>
+ 
+    <form id="eventForm">
+ 
+      <label for="studentName">Student Name</label>
+      <input
+        type="text"
+        id="studentName"
+        required
+        minlength="4"
+        placeholder="Enter your name"
+      >
+ 
+      <label for="email">Email Address</label>
+      <input
+        type="email"
+        id="email"
+        required
+        placeholder=" Please Enter your email"
+      >
+ 
+      <label for="age">Age</label>
+      <input
+        type="number"
+        id="age"
+        required
+        min="9"
+        max="18"
+        placeholder=" Please Enter your age"
+      >
+ 
+      <label for="eventName">Choose Event</label>
+      <select id="eventName" required>
+        <option value="">Select an event</option>
+        <option value="Outdoor Soccer day">Outdoor Soccer day</option>
+        <option value="Science Fair">Science Fair</option>
+        <option value="Coding Workshop">Coding Workshop</option>
+        <option value="Swimming Competition">Swimming Competition</option>
+        <option value="Cross Country">Cross Country</option>
+      </select>
+ 
+      <button type="button" onclick="registerEvent()">Register Now</button>
+ 
+    </form>
+ 
+    <div id="feedback">
+      Waiting for registration...
+    </div>
+ 
+  </div>
+ 
+  <script>
+    function registerEvent() {
+ 
+      let form = document.getElementById("eventForm");
+      let feedback = document.getElementById("feedback");
+ 
+      try {
+ 
+        // Constraint Validation API
+        if (!form.checkValidity()) {
+          throw form.reportValidity();
+        }
+        let studentName = document.getElementById("studentName").value;
+        let email = document.getElementById("email").value;
+        let age = Number(document.getElementById("age").value);
+        let eventName = document.getElementById("eventName").value;
+ 
+        if (studentName.length < 4) {
+          throw "Name must have at least 4 characters.";
+        }
+ 
+        if (age < 9 || age > 18) {
+          throw "Age must be between 9 and 18.";
+        }
+ 
+        if (eventName === "") {
+          throw "Please select an event.";
+        }
+ 
+        // DOM Feedback before timer
+        feedback.className = "";
+        feedback.innerHTML = "Checking your registration details...";
+ 
+        setTimeout(function() {
+          let passNumber = Math.floor(Math.random() * 9000) + 1000;
+ 
+          feedback.className = "success";
+          feedback.innerHTML =
+            "Registration Successful!<br>" +
+            "Student Name: " + studentName + "<br>" +
+            "Email: " + email + "<br>" +
+            "Age: " + age + "<br>" +
+            "Event: " + eventName + "<br>" +
+            "Your Event Pass Number: EVT-" + passNumber;
+        }, 2000);
+ 
+      } catch (error) {
+ 
+        // DOM Feedback for errors
+        feedback.className = "error";
+ 
+        if (error !== undefined) {
+          feedback.innerHTML = "Registration failed: " + error;
+        } else {
+          feedback.innerHTML = "Please complete all required fields correctly.";
+        }
+      }
+    }
+  </script>
+ 
+</body>
+</html>
