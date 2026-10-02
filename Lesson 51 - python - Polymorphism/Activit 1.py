@@ -63,6 +63,16 @@ print("\n--- Updating scores ---")
 cricket.set_score(100)
 soccer.set_score(3)
 
+# What is encapsulation?
+# Encapsulation is the concept of bundling data (attributes) and methods (functions) that operate on that data within a single unit (class), and restricting direct access to some of the object's components.
+
+# What is polymorphism?
+# Polymorphism is the ability of different classes to be treated as instances of the same class through a common interface. It allows methods to do different things based on the object it is acting upon, even if they share the same method name.
+
+# 
+
+
+
         
 
 
