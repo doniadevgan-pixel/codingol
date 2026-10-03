@@ -38,4 +38,4 @@ print ("\n=== Updated Bucket List ===")
 print (file.read())
 file.close()
 
-# 
+# read mode: 
