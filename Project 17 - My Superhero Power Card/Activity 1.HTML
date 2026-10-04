@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Superhero Power Card</title>
+</head>
+<body>
+<h1>My Superhero Power Cards</h1>
+
+  <p>
+    Click the button to create superhero objects using JavaScript classes.
+  </p>
+
+  <button onclick="showHeroes()">Show Superheroes</button>
+
+  <div class="card-container" id="super heroCards"></div>
+
+  <script>
+
+    class Superhero {
+
+      constructor(name, power, mission) {
+
+        this.name = name;
+        this.power = power;
+        this.mission = mission;
+      }
+
+      describeHero() {
+        return "<div class='hero-card'>" +
+               "<p class='hero-name'>" + this.name + "</p>" +
+               "<p class='hero-power'>Power: " + this.power + "</p>" +
+               "<p class='hero-mission'>Mission: " + this.mission + "</p>" +
+               "</div>";
+      }
+    }
+
+    function showHeroes() {
+
+      let hero1 = new Superhero(
+        "Suggestion Man",
+        "common sense and problem-solving suggestions",
+        "Help you decide which solution is best for your situation."
+      );
+
+      let hero2 = new Superhero(
+        "Pixel Flash",
+        "Super speed design",
+        "Build colourful websites in seconds."
+      );
+
+      let hero3 = new Superhero(
+        "Smart Thinker",
+        "Logical reasoning",
+        "Use logic to solve tricky challenges."
+      );
+
+      let hero4 = new Superhero(
+        "Data Knight",
+        "Data protection",
+        "Keep important information safe."
+      );
+
+      document.getElementById("heroCards").innerHTML =
+        hero1.describeHero() +
+        hero2.describeHero() +
+        hero3.describeHero() +
+        hero4.describeHero();
+    }
+  </script> 
+</body>
+</html>
