@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Armstrong Numbers Checker</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <h1>Armstrong Number Checker</h1>
+
+  <p>Enter a positive integer to check if it is an Armstrong number.</p>
+
+  <p> Note: An Armstrong number is a number that equals the sum of its digits each raised to the power of the number of digits.</p> <br>
+
+  <input type="number" id="numberInput" placeholder="Enter a number">
+
+  <button onclick="checkNumber()">Check Number</button>
+
+  <div class="result" id="result"></div>
+
+  <script>
+
+
+    function checkNumber() 
+    {
+      let number = Number(document.getElementById("numberInput").value);
+
+      if (document.getElementById("numberInput").value === "" ||
+          !Number.isInteger(number) || number < 0) {
+
+        document.getElementById("result").innerHTML =
+          "Please enter a positive integer.";
+
+        return;
+      }
+
+      let digits = String(number).length;
+
+      let originalNumber = number;
+
+      let total = 0;
+
+      while (number > 0) {
+
+        let digit = number % 10;
+
+        total = total + digit ** digits;
+
+        number = Math.floor(number / 10);
+      }
+
+      if (total === originalNumber) {
+
+        document.getElementById("result").innerHTML =
+          originalNumber + " is an Armstrong number!";
+
+      } else {
+
+        document.getElementById("result").innerHTML =
+          originalNumber + " is not an Armstrong number.";
+      }
+    }
+
+  </script>
+
+</body>
+</html>
