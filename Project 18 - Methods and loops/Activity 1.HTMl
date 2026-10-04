@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Method and Loop</title>
+    <link rel="stylesheet" href="Activity%201.css">
+</head>
+<body>
+    <h1>My Method and Loop</h1>
+
+  <p>Click the button to start the loop.</p>
+
+  <button onclick="countNumbers()">Start Loop</button>
+
+  <div id="numbers"></div>
+
+  <script>
+
+
+    function countNumbers() {
+
+
+      let number = 1;
+
+
+      document.getElementById("numbers").innerHTML = "";
+
+      // Loop runs while the number is less than or equal to 10
+      while (number <= 10) {
+
+  
+        document.getElementById("numbers").innerHTML +=
+          "<div class='number-box'>" + number + "</div>";
+
+        // This will increase the number by one each time the loop runs
+        number++;
+      }
+    }
+
+  </script>
+
+</body>
+</html>
