@@ -1,0 +1,53 @@
+body {
+      font-family: Arial, sans-serif;
+      background-color: aliceblue;
+      text-align: center;
+      color: #222222;
+    }
+
+    h1 {
+      color: darkgreen;
+    }
+
+    #zoo {
+      width: 420px;
+      border: 3px solid darkgreen;
+      border-radius: 12px;
+      background-color: white;
+      margin: 20px auto;
+      padding: 15px;
+    }
+
+    .zone {
+      border: 2px solid seagreen;
+      border-radius: 8px;
+      margin: 10px;
+      padding: 12px;
+      background-color: #f0fff0;
+      text-align: left;
+    }
+
+    .animal {
+      font-weight: bold;
+      color: darkorange;
+    }
+
+    button {
+      background-color: darkgreen;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 22px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    #output {
+      width: 420px;
+      border: 2px dashed darkgreen;
+      border-radius: 10px;
+      background-color: #ffffff;
+      margin: 20px auto;
+      padding: 12px;
+      text-align: left;
+    }
