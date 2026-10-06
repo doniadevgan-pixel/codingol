@@ -1,0 +1,4 @@
+ body { background-color: #F0F0F2; }
+    h1   { color: #FF5A43; }
+    .card-label { font-size: 11px; color: #999; text-transform: uppercase; }
+    pre  { font-size: 13px; color: #333; }
