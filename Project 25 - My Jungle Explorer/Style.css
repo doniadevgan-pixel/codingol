@@ -1,0 +1,41 @@
+body {
+      position: relative;
+    }
+
+    .jungle-slide {
+      height: 220px;
+      text-align: center;
+      padding-top: 80px;
+      font-size: 30px;
+      color: white;
+    }
+
+    .slide-forest {
+      background-color: darkgreen;
+    }
+
+    .slide-water {
+      background-color: #247ba0;
+    }
+
+    .slide-night {
+      background-color: #34305e;
+    }
+
+    .section {
+      padding: 70px 20px;
+      min-height: 320px;
+    }
+
+    #forest {
+      background-color: #e9f7e5;
+    }
+
+    #water {
+      background-color: #e5f5fa;
+    }
+
+    #night {
+      background-color: #eeeafa;
+    }
+  
