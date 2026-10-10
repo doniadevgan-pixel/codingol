@@ -1,0 +1,41 @@
+body {
+      background-color: #f0f7f4;
+      font-family: Arial, sans-serif;
+    }
+
+    .jumbotron {
+      background-color: #d8eee3;
+      border-left: 6px solid #21916b;
+    }
+
+    .jumbotron h1 {
+      color: #187653;
+    }
+
+    .section-title {
+      color: #187653;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .progress {
+      height: 25px;
+      border-radius: 10px;
+    }
+
+    .progress-bar {
+      font-weight: bold;
+    }
+
+    .study-note {
+      background-color: white;
+      padding: 15px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      border-radius: 10px;
+    }
