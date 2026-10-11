@@ -1,0 +1,38 @@
+{
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Element Selectors */
+    body {
+      background-color: #f0f0ff;
+      text-align: center;
+    }
+
+    h1 {
+      color: darkblue;
+      font-size: 30px;
+    }
+
+    h2 {
+      color: #7b2cbf;
+    }
+
+    p {
+      color: #444444;
+    }
+
+    /* Class Selector */
+    .cartoon-detail {
+      color: darkgreen;
+      font-weight: bold;
+    }
+
+    /* ID Selector */
+    #cartoon-card {
+      background-color: #d9f7ff;
+      border: 2px solid skyblue;
+      border-radius: 12px;
+      padding: 15px;
+      margin: 20px;
+    }
