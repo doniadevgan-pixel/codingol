@@ -14,9 +14,9 @@ def read_whole_number(prompt):
 def factors_brute(n):
       """Brute force: try every i from 1 to n. Makes n cheacks 0(n)"""
       found=[]
-      cheacks=0
+      checks=0
       for i in range(1,n+1):
-            cheacks+=1
+            checks+=1
             if n%i==0:
                   found.append(i)
       return found, checks
